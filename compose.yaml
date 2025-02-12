@@ -1,0 +1,10 @@
+services:
+  traefik:
+    image: ${IMAGE_NAME}
+    command:
+      - pwsh
+      - -c
+      - "while (1 -eq 1) { Write-Host \"Looping...\"; Start-Sleep -Seconds 5 }" 
+    build:
+      context: .
+      dockerfile: dockerfile
